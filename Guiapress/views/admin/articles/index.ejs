@@ -1,53 +1,85 @@
-<%- include('../../partials/header.ejs')%>
-<%- include('../../partials/navbar.ejs')%>
+<%- include('../../partials/header.ejs')%> <%-
+include('../../partials/navbar.ejs')%>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  .container {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #98c1d9;
+  }
+
+  .container h2 {
+    font-family: "Archivo", sans-serif;
+    color: #ee6c4d;
+  }
+  .container a {
+    color: #e0fbfc;
+  }
+</style>
 
 <div class="container">
-<hr>
-<h2>Artigos</h2>
-<a class="btn btn-dark" href="/admin/articles/new">Criar nova artigo</a>
-<hr>
-<table class="table table-bordered">
+  <hr />
+  <h2>Artigos</h2>
+  <a
+    class="btn btn-dark"
+    href="/admin/articles/new"
+    style="background-color: #98c1d9"
+    >Criar nova artigo</a
+  >
+  <hr />
+  <table class="table table-bordered">
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>título</th>
-            <th>Slug</th>
-            <th>Categoria</th>
-            <th>Ações</th>
-        </tr>
+      <tr>
+        <th>Id</th>
+        <th>título</th>
+        <th>Slug</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+      </tr>
     </thead>
     <tbody>
-        <% articles.forEach(article => { %>
-            <tr>
-            <td><%= article.id %></td>
-            <td><%= article.title %></td>
-            <td><%= article.slug %></td>
-            <td><%= article.category.title%></td>
-            <td>
-                <form method="POST" action="/articles/delete" style="display: inline;" onsubmit="confirmarDeletar(event, this)">
-                    <input type="hidden" name="id" value="<%= article.id %>">
-                    <button class="btn btn-danger">Deletar</button>
-                </form>
+      <% articles.forEach(article => { %>
+      <tr>
+        <td><%= article.id %></td>
+        <td><%= article.title %></td>
+        <td><%= article.slug %></td>
+        <td><%= article.category.title%></td>
+        <td>
+          <a
+            href="/admin/articles/edit/<%= article.id %>"
+            class="btn btn-outline-danger"
+            style="background-color: #77dd77"
+            >Editar</a
+          >
+          <form
+            method="POST"
+            action="/articles/delete"
+            style="display: inline"
+            onsubmit="confirmarDeletar(event, this)"
+          >
+            <input type="hidden" name="id" value="<%= article.id %>" />
 
-            </td>
-        </tr>
+            <button class="btn btn-outline-danger">Deletar</button>
+          </form>
+        </td>
+      </tr>
 
-        <% }) %>
+      <% }) %>
     </tbody>
-</table>
+  </table>
 </div>
 
 <%- include('../../partials/footer.ejs')%>
 <script>
-function confirmarDeletar(event, form){
-    event.preventDefault()
-   var decision = confirm("Você quer deletar esse?")
-   if(decision){
-       form.submit()
-       
-   }
-      
-   
-    
-}
+  function confirmarDeletar(event, form) {
+    event.preventDefault();
+    var decision = confirm("Você quer deletar esse?");
+    if (decision) {
+      form.submit();
+    }
+  }
 </script>

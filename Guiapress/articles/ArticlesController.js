@@ -54,7 +54,7 @@ router.post("/articles/delete", adminAuth, (req, res) => {
   }
 });
 
-router.get("/admin/articles/edit/:id", adminAuth, (req, res) => {
+router.get("/admin/articles/edit/:id", (req, res) => {
   var id = req.params.id;
   Article.findByPk(id)
     .then((article) => {
