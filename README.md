@@ -1,21 +1,22 @@
-<h1 style="text-align: center; font-weight: bold;">Blog-GuiaPress</h1>
+<h1 style="text-align: center; font-weight: bold;">GuiaPress</h1>
+<p align="center">This is a simple blog/crud for publishing articles. With administrative panel.</p>
 
 ## Demo 📸
 
 <div align="center" >
   <img src="./github/meublog.gif" alt="demo-web" height="425">
-  
+
 </div>
 
 ---
 
 ## Sobre o Projeto
 
-arquitetura separada por (funcionalidade) semelhante a arquitetura mvc.
-Este projeto foi desenvolido
-
-_Realiconamento_
-relacionamento
+Esse projeto conta com o uso de sessões/cookies, middleware para autenticar
+rotas, hash na senhas para almentar a segurança. E para á publicação dos artigos usei o [Tiny](https://www.tiny.cloud/)
+um editor de texto completo. A arquitetura está separada por funcionalidades
+mas esta semelhante a o padrão MVC. Para estilização usei o bootstrap e fiz algumas
+modificações no css.
 
 ### 🛠 Tecnologias
 
@@ -29,7 +30,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [sequelize](https://sequelize.org/)
 - [express-session](https://www.npmjs.com/package/express-session)
 - [Express](https://expressjs.com/)
-- [tiny](https://www.tiny.cloud/)
+- [tinyMCE](https://www.tiny.cloud/)
+- [bootstrap](https://getbootstrap.com/)
 
 ---
 
@@ -59,6 +61,7 @@ $ nodemon index.js
 
 # entre no link
 http://localhost:3030/
+
 
 ```
 
