@@ -1,4 +1,4 @@
-<h1 style="text-align: center; font-weight: bold;">GuiaPress</h1>
+<h1 align="center" style="text-align: center; font-weight: bold;">GuiaPress</h1>
 <p align="center">This is a simple blog/crud for publishing articles. With administrative panel.</p>
 
 ## Demo 📸
