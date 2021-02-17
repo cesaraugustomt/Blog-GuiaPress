@@ -13,7 +13,7 @@
 ## Sobre o Projeto
 
 Esse projeto conta com o uso de sessões/cookies, middleware para autenticar
-rotas, hash na senhas para almentar a segurança. E para á publicação dos artigos usei o [Tiny](https://www.tiny.cloud/)
+rotas, hash na senhas para aumentar a segurança. Para á publicação dos artigos usei o [Tiny](https://www.tiny.cloud/)
 um editor de texto completo. A arquitetura está separada por funcionalidades
 mas esta semelhante a o padrão MVC. Para estilização usei o bootstrap e fiz algumas
 modificações no css.
